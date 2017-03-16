@@ -54,11 +54,6 @@
     line-height: 50px;
 }
 
-#threads, #messages {
-    height: 600px;
-    overflow-y: scroll;
-}
-
 #threads-header, #threads {
     width: 400px;
 }
@@ -93,19 +88,29 @@
     border-top: solid;
     border-width: 1px;
     border-color: lightgray;
+    height: 600px;
+    overflow-y: scroll;
     
-    background-color: #E8E8E8;
+    background-color: #F6F6F6;
 }
 
 #threads > div {
     height: 50px;
     width: 400px;
     line-height: 25px;
-    background-color: white;
+    background-color: #F6F6F6;
     border-bottom: solid;
     border-width: 1px;
     border-color: lightgray;
     cursor: pointer;
+}
+
+#threads > div.active {
+    background-color: white;
+}
+
+#threads > div:hover {
+    background-color: white;
 }
 
 #messages {
@@ -113,6 +118,66 @@
     border-top: solid;
     border-width: 1px;
     border-color: lightgray;
+    overflow-y: scroll;
+    height: 500px;
     
 /*    background-color: beige;*/
+}
+
+.message {
+    border-top: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    padding: 10px;
+}
+
+.message:first-child {
+    border-width: 0px;
+}
+
+.message-pp {
+    width: 50px;
+    border-radius: 50%;
+    margin: 10px;
+    float: left;
+}
+
+.message > p {
+    margin: 5px;
+}
+
+.message-text {
+    padding-left: 65px;
+}
+
+#composer {
+    position: relative;
+    height: 100px;
+    float: left;
+    width: 624px;
+    
+/*    background-color: beige;*/
+}
+
+#message-input {
+    position: relative;
+    width: 500px;
+    margin: 10px;
+    padding: 0px 5px;
+    height: 80px;
+    border: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    border-radius: 5px;
+    float: left;
+    
+    background-color: white;
+}
+
+#message-send {
+    height: 100px;
+    line-height: 100px;
+    float: left;
+    
+/*    background-color: bisque;*/
 }
